@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.focus,
+bold {
+  font-size: 1rem;
+  /* font-weight: bold; */
+  color: red;
+}
+em {
+  color: green;
+}
+span {
+  display: flex;
+  gap: 5px;
+}
+ol li {
+}
