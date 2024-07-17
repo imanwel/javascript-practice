@@ -76,6 +76,7 @@ let person = {
     },
   },
 };
+
 // console.log(person);
 // let nephewFromBrother = "steven";
 // // console.log(nephewFromBrother);
@@ -203,4 +204,267 @@ let continent = {
     },
   },
 };
-console.log(continent.africa.countries.togo.kara);
+// console.log(continent);
+
+// destruturing
+
+// console.log(continent.africa.countries);
+
+let { countries } = continent.africa;
+
+console.log(countries);
+
+let { accountNumber, name, active } = person;
+
+// console.log(accountNumber);
+// console.log(name);
+// console.log(active);
+
+// let { brother } = person.siblings;
+// console.log(brother);
+
+// string
+// number methods
+
+let val;
+
+// string method
+
+// val = lastName.length;
+
+// val = lastName.toLowerCase();
+
+// val = lastName.toUpperCase();
+
+// concat
+
+// val = firstName + lastName;
+
+// val = firstName.concat(lastName);
+
+// val = firstName.indexOf("h");
+// val = firstName.lastIndexOf("h");
+
+// val = firstName.charAt(2);
+
+// val = firstName.endsWith("r");
+
+// val = firstName.includes("q");
+// val = firstName.toString();
+
+// val = firstName.substring(0, 3);
+
+// val = firstName.startsWith("j");
+
+let figure = 20;
+
+// number method
+// val = Math.PI;
+// val = Math.sin(figure);
+// val = Math.cos(figure);
+// val = Math.tan(figure);
+// val = Math.sqrt(64);
+// val = Math.pow(100, 2);
+// val = Math.floor(10.9);
+// val = Math.ceil(10.1);
+// val = Math.round(10.7);
+// val = Math.abs(-112);
+// val = Math.random();
+// val = Math.floor(Math.random() * 11);
+
+// template string
+
+let lastName = "james";
+let firstName = "jesse";
+let userAge = 55;
+
+// let fullName = firstName + " " + lastName;
+
+let fullName = `my name is ${firstName} ${lastName} i am ${userAge} years old`;
+
+val = fullName;
+console.log(val);
+
+// arrays  is block containing series of values
+let items = ["shoe", "clothes", "bags"];
+
+let [item1, item2, item3] = items;
+// [item0, item1, item2] = items; //destructured
+console.log(item1);
+
+// console.log(items[1]);
+
+person.enimies = "john wick";
+person.active = false;
+
+person.siblings.nephew.fromFather = "johnson";
+person.siblings.nephew.fromMother = "simon";
+
+let { fromFather } = person.siblings.nephew;
+
+console.log(person);
+console.log(fromFather);
+
+// function non primitive data type
+// object
+// is a bolock of code containing alghorithm
+// is a sequence of instruction to carry out a task or solve a problem
+// properties of a function
+
+// declaration
+// function name
+// parameters are optional // it makes the function dynamic
+// execution block (alghorithm ,  retun value)
+// invocation /activation
+
+// An activated function is called a method
+
+// function greetUser() {
+//   console.log("hello user");
+// }
+
+// function greetUser() {
+//   console.log(1 + 1);
+// }
+
+// greetUser();
+
+function welcomeClient(user) {
+  let result = "hello you are welcome " + user;
+  return result;
+}
+
+function addSum(value1, value2) {
+  let result = value1 + value2;
+  return result;
+}
+
+console.log(addSum(100, 10));
+
+console.log(addSum(20, 5));
+// console.log(welcomeClient("james"));
+// welcomeClient("stacy");
+// welcomeClient("john");
+
+function sqrt(figure) {
+  let val = Math.sqrt(figure);
+  return val;
+}
+console.log(sqrt(25));
+
+function random(value) {
+  let val = Math.floor(Math.random() * value);
+  return val;
+}
+console.log(random(20));
+
+function add(numb1, numb2) {
+  // console.log(2 + numb);
+  let val = numb1 + numb2;
+  return val;
+}
+console.log(add(10, 5));
+// add(10);
+
+let report = {
+  toConsole: (value) => {
+    console.log(value);
+  },
+};
+
+// or
+
+let log = {
+  toConsole: function (value) {
+    console.log(value);
+  },
+};
+
+report.toConsole("hllo world");
+log.toConsole(1 + 1);
+report.toConsole(person);
+
+// arrow function
+
+const subtact = () => {};
+
+function welcomeUser(person) {
+  let val = `${"You are welcome"} ${person}`;
+  return val;
+}
+
+log.toConsole(welcomeUser("james"));
+
+// loop is a continous execution while a certain condition is true
+
+// for loop
+// while loop
+// do while loop
+// map
+// forEach
+// for in
+
+// for loop
+// delclaration
+// parameters are where condition comes in
+// the condition takes in three params 1= assingment  2= condition 3=incrementtation
+// execution
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// while
+// declaration
+// condition
+// execution
+
+// let x = 0;
+
+// while (x < 10) {
+//   console.log(x);
+//   x++;
+// }
+
+// do {
+//   console.log(x);
+//   x++;
+// } while (x < 4);
+
+// for (let i = 5; i > 0; i--) {
+//   console.log(i);
+// }
+
+// let i = 5;
+
+// while (i > 0) {
+//   console.log(i);
+//   i--;
+// }
+
+// i = 19;
+
+// do {
+//   console.log(i);
+//   i--;
+// } while (i > 8);
+
+let userItems = ["one", "two", "three", "four"];
+
+// for (let i = 0; i < userItems.length; i++) {
+//   let result = userItems[i];
+//   console.log(result);
+// }
+
+userItems.forEach((item) => {
+  item = "testing";
+  console.log(item);
+});
+
+let products = ["first", "second", "third", "fourth"];
+// let [product1, product2, product3, product4] = products;
+products.forEach(function (product) {
+  console.log(product);
+});
+
+// products = {}
