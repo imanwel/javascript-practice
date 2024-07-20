@@ -456,15 +456,133 @@ let userItems = ["one", "two", "three", "four"];
 //   console.log(result);
 // }
 
-userItems.forEach((item) => {
-  item = "testing";
-  console.log(item);
-});
+// userItems.forEach((item) => {
+// value can be assigned to the parameter
+// item = "testing"; //where "testing" is the value
+// console.log(item);
+// });
 
+// products.forEach(function (product) {
+// product = "items";
+// console.log(product);
+// });
+
+// array methods
+
+// push() adds to the end of an array
+// products.push("last");
+
+// unshift() adds to the starting of an array
+// products.unshift("james");
+
+// pop() removes from the end of an array
+// products.pop();
+
+// shift() remove from the begining of an array
+// products.shift();
+
+// length property
+// let value = products.length;
+// console.log(value);
+
+// splice()
+// products.splice(1, 2);
+// products.splice(-2); nagative value removes from the end
+
+// console.log(products.includes("first"));
+
+// products.map((item) => {
+//   item = "just testing";
+//   console.log(item);
+// });
 let products = ["first", "second", "third", "fourth"];
-// let [product1, product2, product3, product4] = products;
-products.forEach(function (product) {
-  console.log(product);
-});
 
-// products = {}
+// for (let item in products) {
+//   console.log(products[item]);
+// }
+
+// console.log(products);
+
+// string methods()
+
+// split()
+
+// let valuE = "this is a boy";
+
+// let result = valuE.split(",");
+// console.log(result);
+
+// result = valuE.replace("this", "that");
+
+// console.log(result);
+
+// conditionals
+
+// conventional conditional rendering
+
+// tenarry operator
+
+let user = "jerry";
+user = "james";
+user = "jerry";
+user = "doe";
+// user = "jerry";
+
+// if (user !== "jerry") {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// eslse if
+
+// if (user === "jerry") {
+//   console.log(true);
+// } else if (user === "doe") {
+//   console.log("the user is now doe");
+// } else {
+//   console.log(false);
+// }
+
+// let userage = 4;
+
+// if (userage > 3 && userage < 5) {
+//   console.log(true);
+// } else {
+//   console.log(false);
+// }
+
+// generate a random number from 0 - 10
+// create a function to check the condition of the generated value
+// whenever the value exceed 5 , console.log() it ,,when it is below 5 console.log() it
+// when the value hits 8 console.log() it
+//  when the value hits 4 console.log() it
+
+// let solo = Math.ceil(Math.random() * 10);
+// console.log(solo);
+
+function generate(value) {
+  let solo = Math.ceil(Math.random() * value);
+  console.log(solo);
+  // return solo
+  if (solo > 5) {
+    console.log("value exceeds 5");
+  } else if (solo < 5) {
+    console.log("value is below 5");
+  } else if (solo === 8) {
+    console.log("value at 8");
+  } else if (solo === 4) {
+    console.log("value at 4");
+  } else {
+    console.log("random value");
+  }
+}
+generate(10);
+
+let soLo = Math.ceil(Math.random() * 10);
+
+// if ([Math.ceil(Math.random() * 10)] === 8) {
+//   console.log(true);
+// } else {
+//   console.log("null");
+// }
