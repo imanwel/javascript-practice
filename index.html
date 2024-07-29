@@ -14,17 +14,26 @@
       console.log(p1);
       console.log(h2);
     </script> -->
+
+    <style>
+      label {
+        display: block;
+      }
+      button {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-    <main class="">
+    <!-- <main class="">
       <h1>Welcome to javascript practice</h1>
       <p>Learning pure javascript a.k.a Vanilla js</p>
       <h2>Things to know</h2>
       <ul>
         <li>Working with console</li>
-        <li>Variable declarations/declarators</li>
-        <!-- <li></li> -->
-      </ul>
+        <li>Variable declarations/declarators</li> -->
+    <!-- <li></li> -->
+    <!-- </ul>
       <h3>Working with console</h3>
       <p>console.log(variable) then <bold>"enter"</bold></p>
       <h3>Variable declarations/declarators</h3>
@@ -49,7 +58,29 @@
           </span>
         </li>
       </ol>
-    </main>
+    </main> -->
+
+    <form id="form" class="form">
+      <h1 class="formHeader">sign up</h1>
+      <label for="uerName">userName</label>
+      <input type="text" placeholder="userName" id="userName" />
+
+      <label for="password"> Password</label>
+      <input type="password" placeholder="********" />
+
+      <!-- <span
+        ><label for="gender">Gender</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </span> -->
+
+      <button class="submitBtn form">sign up</button>
+    </form>
+
+    <section><form id="mainForm"></form></section>
+
     <script src="content/js/app.js"></script>
   </body>
 </html>

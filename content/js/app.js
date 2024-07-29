@@ -486,6 +486,7 @@ let userItems = ["one", "two", "three", "four"];
 // console.log(value);
 
 // splice()
+// splice(removes from, keeps from)
 // products.splice(1, 2);
 // products.splice(-2); nagative value removes from the end
 
@@ -562,12 +563,12 @@ user = "doe";
 // console.log(solo);
 
 function generate(value) {
-  let solo = Math.ceil(Math.random() * value);
+  let solo = Math.round(Math.random() * value);
   console.log(solo);
   // return solo
-  if (solo > 5) {
+  if (solo > 5 && solo < 8) {
     console.log("value exceeds 5");
-  } else if (solo < 5) {
+  } else if (solo < 5 && solo < 4) {
     console.log("value is below 5");
   } else if (solo === 8) {
     console.log("value at 8");
@@ -579,10 +580,445 @@ function generate(value) {
 }
 generate(10);
 
-let soLo = Math.ceil(Math.random() * 10);
+// let soLo = Math.ceil(Math.random() * 10);
 
 // if ([Math.ceil(Math.random() * 10)] === 8) {
 //   console.log(true);
 // } else {
 //   console.log("null");
 // }
+
+// switches
+
+let color = "blue";
+color = "red";
+color = "yellow";
+color = "black";
+
+switch (color) {
+  case "blue":
+    console.log("the color is blue");
+    break;
+  case "red":
+    console.log("the color is now red");
+    break;
+  case "yellow":
+    console.log("the value is now yellow");
+    break;
+  default:
+    console.log("color does not exist");
+}
+
+// type convertion
+
+// let useNumber = "20";
+// useNumber = useNumber.toString();
+// useNumber = Number(useNumber);
+
+// console.log(typeof useNumber);
+
+// date and time methods and properties
+
+// let date = new Date();
+
+// date = date.getDate();
+// date = date.getTime();
+// date = date.getDay();
+// date = date.getMonth();
+// date = date.getFullYear();
+// date = date.getHours();
+// date = date.toLocaleDateString();
+// date = date.toLocaleTimeString();
+// console.log(date);
+
+let today = new Date().getDay();
+let dateValue = new Date().getTime();
+switch (today) {
+  case 0:
+    today = "Sunday";
+    break;
+  case 1:
+    today = "Monday";
+    break;
+  case 2:
+    today = "Tuesday";
+    break;
+  case 3:
+    today = "Wednesday";
+    break;
+  case 4:
+    today = "Thursday";
+    break;
+  case 5:
+    today = "Friday";
+    break;
+  case 6:
+    today = "Saturday";
+    break;
+  default:
+    console.log("something went wrong , we are working on it");
+    break;
+}
+
+console.log(today);
+
+// let getAge = (dob) => {
+//   let age = new Date(dob);
+//   let initialize = Date.now() - age.getTime();
+//   let difference = new Date(initialize);
+//   return `you are  currently ${Math.abs(
+//     difference.getUTCFullYear() - 1970
+//   )} years old`;
+// };
+
+// console.log(getAge("sep-2-1990"));
+// console.log(getAge("aug-6-2011"));
+
+// let initialize = Date.now() - new Date("sep-2-1990").getTime();
+// let newDate = new Date(initialize);
+// console.log(newDate.getFullYear() - 1970);
+
+// let myAge = (dob) => {
+//   let age = new Date(dob);
+//   let initialize = Date.now() - age.getTime();
+//   let getAge = new Date(initialize).getFullYear() - 1970;
+//   return Math.abs(getAge);
+// };
+
+// console.log(`you are ${myAge("sep-2-1990")} years old`);
+
+// DOM
+// document object module
+
+// create elements
+
+let pTag = document.createElement("p");
+
+let a = document.createElement("a");
+
+let input = document.createElement("input");
+let label = document.createElement("label");
+
+label.setAttribute("for", "userName");
+
+let image = document.createElement("img");
+
+// image.src = "/home/photos";
+
+console.log(label);
+
+// setting attributes
+
+// input.setAttribute("type", "text");
+// input.setAttribute("placeholder", "userName");
+// input.disabled = true;
+
+// input.setAttribute("class", "userInput");
+// input.setAttribute("id", "jamesId");
+
+input.className = "input element";
+
+input.id = "id input";
+
+input.type = "text";
+input.type = "password";
+
+input.placeholder = "add a place holder";
+
+console.log(input);
+
+console.log(a);
+// a.setAttribute("href", "facebook.com");
+a.href = "jame.com";
+
+a.id = "a tag id";
+
+// a.setAttribute("id", "anchor");
+
+let form = document.createElement("form");
+
+// form.setAttribute("action", "get");
+console.log(form);
+
+// console.log(pTag);
+
+// pTag.textContent = "hello world";
+
+pTag.innerText = "this is a text";
+
+pTag.appendChild(document.createTextNode("this is another trual"));
+console.log(pTag);
+// appending
+
+let list = "li";
+let ul = document.createElement("ul");
+
+let li = document.createElement(list);
+console.log(ul, li);
+
+ul.appendChild(li);
+console.log(ul);
+
+//form that has username, password, submit
+
+let foRm = document.createElement("form");
+let label1 = document.createElement("label");
+label1.id = "text";
+label1.textContent = "Username:";
+let input1 = document.createElement("input");
+input1.setAttribute("type", "text");
+input1.setAttribute("placeholder", "username");
+let label2 = document.createElement("label");
+label2.setAttribute("id", "password");
+label2.innerText = "Password:";
+let input2 = document.createElement("input");
+input2.type = "password";
+input2.placeholder = "password";
+
+let button = document.createElement("button");
+button.setAttribute("type", "submit");
+button.innerText = "Submit";
+
+foRm.appendChild(label1);
+foRm.appendChild(input1);
+foRm.appendChild(label2);
+foRm.appendChild(input2);
+foRm.appendChild(button);
+
+console.log(foRm);
+
+// target elements
+
+// get element  by id
+// get element by className
+// get element by tagname
+// get element by name
+//  Query selector
+// Query  selector all
+
+// let Form = document.getElementsByClassName("form");
+// let Form = document.getElementById("form");
+// let Form = document.getElementsByTagName("form");
+// let Form = document.querySelector(".form");
+// let Form = document.querySelectorAll(".form");
+
+// let body = document.querySelector("body");
+
+// body.appendChild(foRm);
+
+// console.log(body);
+
+// let useText = "log in";
+// let header = document.querySelector(".formHeader");
+// header.textContent = useText.toUpperCase();
+
+// header.style.color = "blue";
+// header.style.backgroundColor = "green";
+// let secTion = document.querySelector("section");
+// secTion.style.backgroundColor = "yellow";
+// secTion.style.height = "100%";
+// secTion.style.padding = "30px";
+// secTion.style.marginTop = "10px";
+
+let Form = document.querySelector("#mainForm");
+Form.style.backgroundColor = "white";
+Form.style.padding = "30px";
+Form.style.width = "40%";
+Form.style.margin = "50px";
+Form.style.border = "1px solid black";
+Form.style.display = "flex";
+Form.style.flexDirection = "column";
+Form.style.gap = "5px";
+Form.style.overflow = "auto";
+// Form.style.justifyContent = "center";
+
+let header = document.createElement("h1");
+let headText = "Registration Form";
+header.innerText = headText;
+header.style.textAlign = "center";
+header.style.padding = "10px";
+
+let laBel1 = document.createElement("label");
+laBel1.innerText = "Firstname:";
+laBel1.setAttribute("for", "text1");
+let inPut1 = document.createElement("input");
+inPut1.type = "text";
+inPut1.id = "text1";
+inPut1.placeholder = "Enter your firstname";
+inPut1.required = "true";
+inPut1.style.padding = "5px";
+
+let laBel2 = document.createElement("label");
+laBel2.innerText = "Lastname:";
+laBel2.setAttribute("for", "text2");
+let inPut2 = document.createElement("input");
+inPut2.type = "text";
+inPut2.id = "text2";
+inPut2.placeholder = "Enter your surname";
+inPut2.required = "true";
+inPut2.style.padding = "5px";
+
+let genDob = document.createElement("div");
+
+let span1 = document.createElement("span");
+
+let genderLabel = document.createElement("label");
+genderLabel.innerText = "Gender:";
+genderLabel.setAttribute("for", "gender");
+let genDer = document.createElement("select");
+genDer.name = "gender";
+genDer.id = "gender";
+// genDer.required = "true";
+// let choose = document.createElement("option");
+// choose.value = "choose";
+// choose.innerText = "What's your gender?";
+// choose.disabled = "true";
+let male = document.createElement("option");
+male.value = "male";
+male.innerText = "Male";
+let female = document.createElement("option");
+female.value = "female";
+female.innerText = "Female";
+
+// genDer.appendChild(choose);
+genDer.appendChild(male);
+genDer.appendChild(female);
+
+span1.appendChild(genderLabel);
+span1.appendChild(genDer);
+
+let span2 = document.createElement("span");
+
+let dobLabel = document.createElement("label");
+dobLabel.innerText = "Date of birth:";
+dobLabel.setAttribute("for", "age");
+let dobInput = document.createElement("input");
+dobInput.type = "date";
+dobInput.id = "age";
+dobInput.required = "true";
+
+span2.appendChild(dobLabel);
+span2.appendChild(dobInput);
+
+genDob.appendChild(span1);
+genDob.appendChild(span2);
+genDob.style.display = "flex";
+genDob.style.justifyContent = "space-between";
+
+let laBel3 = document.createElement("label");
+laBel3.innerText = "Username:";
+laBel3.setAttribute("for", "text");
+let inPut3 = document.createElement("input");
+inPut3.type = "text";
+inPut3.id = "text";
+inPut3.placeholder = "username";
+inPut3.required = "true";
+inPut3.style.padding = "5px";
+// let div3 = document.createElement("div");
+// div3.appendChild(laBel3);
+// div3.appendChild(inPut3);
+// div3.style.display = "flex";
+// div3.style.gap = "5px";
+
+let laBel4 = document.createElement("label");
+laBel4.innerText = "Email:";
+laBel4.setAttribute("for", "email");
+let inPut4 = document.createElement("input");
+inPut4.type = "email";
+inPut4.id = "email";
+inPut4.setAttribute("placeholder", "email@gmail.com");
+inPut4.required = "true";
+inPut4.style.padding = "5px";
+// let div4 = document.createElement("div");
+// div4.appendChild(laBel4);
+// div4.appendChild(inPut4);
+// div4.style.display = "flex";
+// div4.style.gap = "5px";
+
+let laBel5 = document.createElement("label");
+laBel5.innerText = "Password:";
+laBel5.setAttribute("for", "password");
+let inPut5 = document.createElement("input");
+inPut5.type = "password";
+inPut5.id = "password";
+inPut5.setAttribute("placeholder", "******");
+inPut5.required = "true";
+inPut5.style.padding = "5px";
+// let div5 = document.createElement("div");
+// div5.appendChild(laBel5);
+// div5.appendChild(inPut5);
+// div5.style.display = "flex";
+// div5.style.gap = "5px";
+
+let confirmPass = document.createElement("label");
+confirmPass.innerText = "Confirm password:";
+confirmPass.setAttribute("for", "password2");
+let passInput = document.createElement("input");
+passInput.type = "password";
+passInput.id = "password2";
+passInput.setAttribute("placeholder", "******");
+passInput.required = "true";
+passInput.style.padding = "5px";
+
+let butTon = document.createElement("button");
+butTon.textContent = "Submit";
+butTon.style.fontWeight = "bold";
+butTon.style.color = "white";
+butTon.style.backgroundColor = "black";
+butTon.style.width = "200px";
+butTon.style.alignSelf = "center";
+butTon.style.margin = "10px";
+
+let ptaG = document.createElement("p");
+// let sInAnchor = document.createElement("a");
+// sInAnchor.innerText = "sign in";
+ptaG.textContent = "Already have an account? sign in";
+ptaG.style.color = "red";
+ptaG.style.textAlign = "center";
+
+// let signIn = ptaG.textContent.concat(sInAnchor);
+// console.log(signIn);
+
+Form.appendChild(header);
+
+// Form.appendChild(div1);
+Form.appendChild(laBel1);
+Form.appendChild(inPut1);
+
+// Form.appendChild(div2);
+Form.appendChild(laBel2);
+Form.appendChild(inPut2);
+
+// Form.appendChild(div);
+// Form.appendChild(genderLabel);
+// Form.appendChild(gender);
+Form.appendChild(genDob);
+
+// Form.appendChild(div);
+// Form.appendChild(genderLabel);
+// Form.appendChild(gender);
+// Form.appendChild(span2);
+
+// Form.appendChild(div3);
+Form.appendChild(laBel3);
+Form.appendChild(inPut3);
+
+// Form.appendChild(div4);
+Form.appendChild(laBel4);
+Form.appendChild(inPut4);
+
+// Form.appendChild(div5);
+Form.appendChild(laBel5);
+Form.appendChild(inPut5);
+
+Form.appendChild(confirmPass);
+Form.appendChild(passInput);
+
+Form.appendChild(butTon);
+
+Form.appendChild(ptaG);
+
+// header.style.backgroundColor = "blue";
+
+// let allInput = document.querySelectorAll("input");
+// console.log(allInput);
