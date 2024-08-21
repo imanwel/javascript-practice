@@ -16,11 +16,18 @@ bold {
   color: red;
 }
 em {
-  color: green;
+  color: rgb(13, 40, 13);
 }
 span {
   display: flex;
   gap: 5px;
 }
 ol li {
+}
+.box {
+  border-radius: 200px;
+}
+span {
+  display: block;
+  margin: 5px;
 }

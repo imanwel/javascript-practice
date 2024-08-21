@@ -60,27 +60,189 @@
       </ol>
     </main> -->
 
-    <form id="form" class="form">
-      <h1 class="formHeader">sign up</h1>
-      <label for="uerName">userName</label>
-      <input type="text" placeholder="userName" id="userName" />
+    <!-- <section><form id="mainForm"></form></section> -->
+    <!-- <ul class="ul"></ul> -->
 
-      <label for="password"> Password</label>
-      <input type="password" placeholder="********" />
+    <!-- <div
+      class="box"
+      style="width: 200px; height: 200px; background-color: red"
+    ></div>
+    <br /><br />
 
-      <!-- <span
-        ><label for="gender">Gender</label>
-        <select name="gender" id="gender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-      </span> -->
+    <div style="display: flex; gap: 15px; height: 100px; align-items: center">
+      <button class="rotate">Rotate</button>
+      <section
+        class="sec"
+        style="
+          /* border: 2px solid black; */
+          display: flex;
+          justify-content: center;
+          gap: 60px;
+          align-items: center;
+        "
+      >
+        <h1>Navigation</h1>
+        <ul class="ulist" style="display: flex; list-style: none; gap: 20px">
+          <li class=""><a href="">Home</a></li>
+          <li class=""><a href="">Service</a></li>
+          <li class=""><a href="">Contact</a></li>
+        </ul>
+      </section>
+    </div>
+    <input
+      type="text"
+      class="search_here"
+      style="display: block; width: 500px"
+      value="search"
+    /> -->
 
-      <button class="submitBtn form">sign up</button>
+    <!-- Recreate the form using html and set the submit button to console.log('the whole information filled in the form' using e.target.value) -->
+    <form
+      id="form"
+      style="
+        border: 1px solid black;
+        padding: 30px;
+        display: flex;
+        width: 400px;
+        height: 100%;
+        margin: 20px auto;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+      "
+    >
+      <h1 style="text-align: center; padding: 10px">Application form</h1>
+      <span>
+        <label for="firstname">Firstname:</label>
+        <input
+          class="input"
+          type="text"
+          id="firstname"
+          placeholder="enter your firstname"
+          required
+          style="width: 100%"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <span>
+        <label for="surname">Lastname:</label>
+        <input
+          class="input"
+          type="text"
+          id="surname"
+          placeholder="enter your surname"
+          required
+          style="width: 100%"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <span>
+        <label for="address">Address:</label>
+        <input
+          class="input"
+          type="text"
+          id="address"
+          required
+          style="width: 100%"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <!-- <input
+        class="input"
+        type="text"
+        id="address2"
+        required
+        style="width: 100%"
+      /> -->
+      <!-- <p style="font-size: 11px"></p> -->
+
+      <!-- <div style="display: flex; justify-content: space-between">
+        <span>
+          <label for="gender">Gender:</label>
+          <select class="input" name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </span>
+
+        <span>
+          <label for="age">Dob:</label>
+          <input class="input" type="date" id="age" required />
+        </span>
+      </div> -->
+      <span>
+        <label for="username">Username:</label>
+        <input
+          class="input"
+          type="text"
+          id="username"
+          placeholder="create a username"
+          required
+          style="width: 100%"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <span>
+        <label for="email">Email:</label>
+        <input
+          class="input"
+          type="email"
+          id="email"
+          placeholder="youremail@gmail.com"
+          required
+          style="width: 100%"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <span>
+        <label for="password">Password:</label>
+        <input
+          class="input"
+          type="password"
+          id="password"
+          placeholder="********"
+          required
+          style="width: 100%"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <span>
+        <label for="confirm_password">Confirm password:</label>
+        <input
+          class="input"
+          type="password"
+          id="confirm_password"
+          placeholder="********"
+          required
+          style="width: 210px"
+        />
+      </span>
+      <p style="font-size: 11px; visibility: hidden">Error</p>
+
+      <button
+        type="submit"
+        id="submit"
+        style="
+          font-weight: bold;
+          color: white;
+          background-color: black;
+          width: 200px;
+          margin: 0 auto;
+        "
+      >
+        Submit
+      </button>
+      <p style="text-align: center">
+        Already have an account?
+        <a href="" style="text-decoration: none; color: red">sign in</a>
+      </p>
     </form>
-
-    <section><form id="mainForm"></form></section>
-
     <script src="content/js/app.js"></script>
   </body>
 </html>

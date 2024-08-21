@@ -820,16 +820,18 @@ console.log(foRm);
 // secTion.style.padding = "30px";
 // secTion.style.marginTop = "10px";
 
-let Form = document.querySelector("#mainForm");
-Form.style.backgroundColor = "white";
-Form.style.padding = "30px";
-Form.style.width = "40%";
-Form.style.margin = "50px";
-Form.style.border = "1px solid black";
-Form.style.display = "flex";
-Form.style.flexDirection = "column";
-Form.style.gap = "5px";
-Form.style.overflow = "auto";
+// let body = document.querySelector("body");
+// body.style.padding = "20px";
+// let Form = document.querySelector("#mainForm");
+// Form.style.backgroundColor = "white";
+// Form.style.padding = "30px";
+// Form.style.width = "40%";
+// Form.style.margin = "50px";
+// Form.style.border = "1px solid black";
+// Form.style.display = "flex";
+// Form.style.flexDirection = "column";
+// Form.style.gap = "5px";
+// Form.style.overflow = "auto";
 // Form.style.justifyContent = "center";
 
 let header = document.createElement("h1");
@@ -979,20 +981,20 @@ ptaG.style.textAlign = "center";
 // let signIn = ptaG.textContent.concat(sInAnchor);
 // console.log(signIn);
 
-Form.appendChild(header);
+// Form.appendChild(header);
 
 // Form.appendChild(div1);
-Form.appendChild(laBel1);
-Form.appendChild(inPut1);
+// Form.appendChild(laBel1);
+// Form.appendChild(inPut1);
 
 // Form.appendChild(div2);
-Form.appendChild(laBel2);
-Form.appendChild(inPut2);
+// Form.appendChild(laBel2);
+// Form.appendChild(inPut2);
 
 // Form.appendChild(div);
 // Form.appendChild(genderLabel);
 // Form.appendChild(gender);
-Form.appendChild(genDob);
+// Form.appendChild(genDob);
 
 // Form.appendChild(div);
 // Form.appendChild(genderLabel);
@@ -1000,25 +1002,157 @@ Form.appendChild(genDob);
 // Form.appendChild(span2);
 
 // Form.appendChild(div3);
-Form.appendChild(laBel3);
-Form.appendChild(inPut3);
+// Form.appendChild(laBel3);
+// Form.appendChild(inPut3);
 
 // Form.appendChild(div4);
-Form.appendChild(laBel4);
-Form.appendChild(inPut4);
+// Form.appendChild(laBel4);
+// Form.appendChild(inPut4);
 
 // Form.appendChild(div5);
-Form.appendChild(laBel5);
-Form.appendChild(inPut5);
+// Form.appendChild(laBel5);
+// Form.appendChild(inPut5);
 
-Form.appendChild(confirmPass);
-Form.appendChild(passInput);
+// Form.appendChild(confirmPass);
+// Form.appendChild(passInput);
 
-Form.appendChild(butTon);
+// Form.appendChild(butTon);
 
-Form.appendChild(ptaG);
+// let header2 = document.createElement("h1");
+// header2.textContent = "for test purpose";
+// Form.prepend(header2);
+// Form.appendChild(ptaG);
 
 // header.style.backgroundColor = "blue";
 
 // let allInput = document.querySelectorAll("input");
 // console.log(allInput);
+// let uL = document.querySelector("ul");
+// let lisT = `<li> hello world  </li>`;
+
+// uL.innerHTML = lisT;
+
+// event listining
+
+let box = document.querySelector(".box");
+
+// console.log(box);
+
+// keyboard event
+// mouse event
+// submit event
+
+// mouse event
+
+// click event
+
+// box.addEventListener("click", function () {
+
+//   if (box.style.backgroundColor === "red") {
+//     box.style.backgroundColor = "blue";
+//   } else {
+//     box.style.backgroundColor = "red";
+//   }
+// });
+
+// let anchor = document.querySelectorAll("a");
+
+// anchor.style.textDecoration = "none";
+
+// anchor.forEach((item) => {
+//   item.style.textDecoration = "none";
+//   item.style.color = "white";
+//   item.style.backgroundColor = "brown";
+//   // item.style.border = "2px solid black";
+//   item.style.borderRadius = "7px";
+//   item.style.padding = "5px";
+//   item.style.fontWeight = "bold";
+// });
+// console.log(anchor);
+
+let secTion = document.querySelector(".sec");
+
+// let navRotate = document.querySelector(".rotate");
+// navRotate.addEventListener("click", () => {
+//   if (secTion.style.display === "flex") {
+//     secTion.style.display = "block";
+//     // secTion.style.flexDirection = "column";
+//   } else {
+//     secTion.style.display = "flex";
+//   }
+// });
+
+// mouseenter //// mouseleave
+// box.addEventListener("mouseleave", function () {
+//   box.style.backgroundColor = "blue";
+// });
+// box.addEventListener("mouseenter", function () {
+//   box.style.backgroundColor = "red";
+// });
+let search = document.querySelector(".search_here");
+
+// box.addEventListener("mousemove", (e) => {
+//   // console.log(e);
+//   box.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 13)`;
+//   search.value = `position x ${e.offsetX}  position y ${e.offsetY}`;
+//   if (e.offsetY <= 30) {
+//     search.value = "North";
+//     console.log(e.offsetY);
+//   } else if (e.offsetY === 31 && e.offsetY <= 70) {
+//     search.value = "NorthEast";
+//     console.log(e.offsetY);
+//   } else if (e.offsetX >= 167 && e.offsetX <= 190) {
+//     search.value = "East";
+//     console.log(e.offsetX);
+//   } else if (e.offsetY >= 120 && e.offsetY <= 180) {
+//     search.value = "SouthEast";
+//     console.log(e.offsetY);
+//   } else if (e.offsetY >= 150) {
+//     search.value = "South";
+//     console.log("South");
+//   } else if (e.offsetY >= 120 && e.offsetY <= 180) {
+//     search.value = "SouthWest";
+//     console.log(e.offsetY);
+//   } else if (e.offsetX <= 30) {
+//     search.value = "West";
+//     console.log("West");
+//   } else if (e.offsetY >= 30 && e.offsetX >= 30) {
+//     search.value = "NorthWest";
+//     console.log(e.offsetY);
+//   }
+// });
+
+// search.addEventListener("click", runclick);
+
+// function runclick(e) {
+//   console.log(e.target.value);
+// }
+
+let applicationForm = document.querySelector("#form");
+let allInput = document.querySelectorAll(".input"); // area check
+let submitForm = document.querySelector("#submit");
+
+submitForm.addEventListener("mouseenter", function () {
+  submitForm.style.backgroundColor = "red";
+});
+submitForm.addEventListener("mouseleave", function () {
+  submitForm.style.backgroundColor = "black";
+});
+// submitForm.addEventListener("click", function () {
+//   submitForm.style.backgroundColor = "black";
+//   allInput.value = "position"; // area check
+//   console.log(allInput.value); // area check
+// });
+
+// applicationForm.addEventListener("mouseenter", listInputs);
+// function listInputs(){
+
+// }
+submitForm.addEventListener("click", listInputs);
+function listInputs(s) {
+  console.log(allInput);
+  // console.log(s.target);
+  allInput.forEach((item) => {
+    console.log(item.value);
+  });
+}
